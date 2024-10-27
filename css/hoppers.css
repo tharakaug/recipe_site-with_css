@@ -1,113 +1,49 @@
-/* body {
-
-  font-family: Arial, sans-serif;
-  background-color: #E6E6FA; 
-  margin: 20px; 
-}
-
-body img {
-  border-radius: 25px;
-  margin: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-  color: #7474f0;
-  font-size: 3em;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px #706868;
-}
-
-h2 {
-  color: #800080;
-  font-family: 'Georgia', serif;
-}
-
-p {
-  font-size: 16px;
-  color: #555;
-}
-
-blockquote {
-  border-radius: 8px;
-  border-left: 6px solid #7474f0;
-  margin: 20px;
-  padding: 20px;
-  color: #444;
-  background-color: #fafafa;
-}
-
-blockquote {
-  text-align: justify;
-  font-size: 1.1em;
-  color: #333;
-  line-height: 1.3;
-}
-
-article p {
-  text-align: justify;
-  font-size: 1.1em;
-  color: #333;
-  line-height: 1.3;
-}
-
-iframe {
-  border: 2px solid #7474f0;
-  border-radius: 10px;
-  margin: 20px;
-} */
-
-
-/* @media (max-width: 768px) {
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  iframe {
-    width: 100%;
-    height: 250px;
-  }
-
-  main {
-    padding: 10px;
-  }
-}  */
-
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(248, 238, 248);
+  background-color: wheat;
   margin: 0px;
+  animation: zoom-in 1.5s ease forwards;
 }
-
+@keyframes zoom-in {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 body img {
   width: 100%;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-  color: purple;
-  font-size: 3em;
+  color: #e77e57;
+  font-size: 3.5vw;
   margin-bottom: 10px;
   margin-top: 20px;
   text-align: center;
 }
 
 h2 {
-  color: purple;
+  color: #e77e57;
   font-family: "Georgia", serif;
-  margin-left: 45px;
+  margin-left: 40px;
+  font-size: 1.8vw;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1.3vw;
   color: black;
 }
 
 blockquote {
   border-radius: 8px;
-  border-left: 6px solid purple;
-  margin: 20px;
+  border-left: 6px solid #e77e57;
+  margin-left: 10px;
+  margin-right: 30px;
   padding: 20px;
   color: black;
   background-color: #fafafa;
@@ -115,7 +51,7 @@ blockquote {
 
 blockquote {
   text-align: justify;
-  font-size: 1.1em;
+  font-size: 1.3vw;
   color: black;
   line-height: 1.3;
 }
@@ -123,16 +59,157 @@ blockquote {
 article p {
   margin-left: 20px;
   margin-right: 20px;
-  text-align:justify;
-  font-size: 1.1em;
+  text-align: justify;
+  font-size: 1.3vw;
   color: black;
   line-height: 1.3;
 }
 
-iframe {
-  border: 2px solid purple;
-  border-radius: 10px;
-  margin-left: 370px;
-   
+.ifr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  iframe {
+    width: 40vw;
+    height: 24vw;
+  }
 }
 
+@media screen and (max-width: 1440px) {
+  body img {
+    height: 500px;
+  }
+  h1 {
+    font-size: 3.7vw;
+  }
+
+  h2 {
+    font-size: 1.9vw;
+  }
+
+  p {
+    font-size: 1.4vw;
+  }
+
+  blockquote {
+    font-size: 1.4vw;
+  }
+
+  article p {
+    font-size: 1.4vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.8vw;
+  }
+
+  h2 {
+    font-size: 2.1vw;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
+
+  blockquote {
+    font-size: 1.5vw;
+  }
+
+  article p {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body img {
+    height: 300px;
+  }
+  h1 {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 2.8vw;
+    margin-left: 20px;
+  }
+
+  p {
+    font-size: 2.1vw;
+  }
+
+  blockquote {
+    font-size: 2.1vw;
+    margin-left: 0px;
+  }
+
+  article p {
+    font-size: 2.1vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body img {
+    height: 250px;
+  }
+  h1 {
+    font-size: 5.2vw;
+  }
+
+  h2 {
+    font-size: 2.9vw;
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 2.3vw;
+    margin-bottom: 0;
+  }
+
+  blockquote {
+    font-size: 2.3vw;
+    margin-left: 0px;
+    padding: 15px;
+  }
+
+  article p {
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body img {
+    height: 200px;
+  }
+  h1 {
+    font-size: 5.5vw;
+  }
+
+  h2 {
+    font-size: 3.5vw;
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 2.8vw;
+    margin-bottom: 0;
+  }
+
+  blockquote {
+    font-size: 2.8vw;
+    margin-left: 0px;
+    padding: 12px;
+  }
+
+  article p {
+    font-size: 2.8vw;
+  }
+}
