@@ -144,7 +144,7 @@ i:hover {
 div.recipe-section {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  height: 520px;
+  height: 700px;
   width: 100%;
   column-gap: 0px;
   margin-bottom: 25px;
@@ -307,8 +307,8 @@ figure {
   margin: 0px 0;
   flex-wrap: wrap;
   img {
-    width: 5vw;
-    height: 5vw;
+    width: 2vw;
+    height: 2vw;
   }
 }
 
@@ -332,7 +332,7 @@ figure {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 0px;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   opacity: 0.75;
 }
 
