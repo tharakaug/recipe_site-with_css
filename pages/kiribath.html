@@ -1,49 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Lankan Food</title>
-    <link rel="stylesheet" href="/css/kiribath.css">
-    <style>
-
-
-    </style>
-</head>
-<body>
-        <img src="/images/Kiribath-1038x576.jpg" style="width: 100%; " alt="milk rice" style="object-fit: cover"></img>
-
-    <section>
-        <h1>Kiribath(Milk Rice)</h1>
-    <article><p>Kiribath, also known as Milk Rice, is a traditional Sri Lankan dish made by cooking rice with coconut 
-        milk. It's a dish of deep cultural significance, often prepared for special occasions, ceremonies, 
-        and festive events. The name "kiribath" comes from the Sinhala words "kiri" (meaning milk) and "bath" 
-        (meaning rice).Kiribath is not just a dish but a symbol of tradition and culture in Sri Lanka, 
-        reflecting the importance of rice and coconut in the country's culinary heritage.</p></article><br>
-
-    <dl><dt><h2>Ingredients:</h2></dt>
-   <dd> <blockquote><ul><li>Rice: (Usually white rice or a specific short-grain rice variety is used.)</li>
-    <li>Coconut milk: (Freshly extracted or canned coconut milk, which gives the dish its rich, creamy texture.)</li>
-    <li>Salt: (A pinch of salt is added to balance the sweetness of the coconut milk.)</li></ul></blockquote></dd><br>
- 
-    <dl><dt><h2>Preparation:</h2></dt>
-    <dd><blockquote><p><b>Step 1:</b><br> Cooking the Rice: The rice is washed and boiled until it is nearly cooked.
-        <br><br><b>Step 2:</b><br>Adding Coconut Milk: Once the rice is almost done, coconut milk is added along with a pinch of salt. The mixture is cooked on low heat until the rice absorbs the coconut milk 
-        <br><br><b>Step 3:</b><br>Shaping and Serving: The cooked rice is spread on a flat surface, usually a tray, and flattened with the back of a spoon. It is then cut into diamond or square shapes before serving.</p></blockquote></dd><br>
-
-    <dl><dt><h2>Serving:</h2></dt>
-    <dd><blockquote><p>Milk rice is typically served with various accompaniments like lunu miris 
-        (a spicy onion sambol), jaggery (a type of palm sugar), or even bananas. It can be eaten as a 
-        breakfast dish or as part of a larger meal.</p></blockquote></dd>
-    </dl><br>
-
-    <div class="ifr">  
-          <iframe src="https://www.youtube.com/embed/ulmkLHmw-7A?si=HTpyERoAfymF9doz"></iframe>
-    </div>
-    </section>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +6,7 @@
     <title>Kiribath - Sri Lankan Milk Rice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
@@ -64,6 +18,14 @@
             --accent: #f39c12;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
+            --background: #ffffff;
+            --foreground: #1f2937;
+            --card: #f8fafc;
+            --card-foreground: #475569;
+            --muted: #f1f5f9;
+            --muted-foreground: #64748b;
+            --border: #e2e8f0;
+            --radius: 0.75rem;
         }
 
         * {
@@ -79,6 +41,176 @@
             line-height: 1.6;
             overflow-x: hidden;
             animation: fadeIn 1s ease forwards;
+            padding-top: 70px; /* Space for fixed header */
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            color: var(--primary);
+            background: var(--muted);
+            transform: translateY(-2px);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, -10px);
+            transition: all 0.3s ease;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+        }
+
+        .dropdown li {
+            margin: 0;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 0;
+            white-space: nowrap;
+        }
+
+        .dropdown a:hover {
+            background: var(--muted);
+        }
+
+        .burger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .burger:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1001;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding-top: 2rem;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-menu a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: block;
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background: var(--muted);
+            color: var(--primary);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
         }
 
         @keyframes fadeIn {
@@ -245,14 +377,14 @@
             position: relative;
         }
 
-        ul li::before {
+        /* ul li::before {
             content: '•';
             color: var(--primary);
             font-size: 1.5rem;
             position: absolute;
             left: 0;
             top: -5px;
-        }
+        } */
 
         .step-number {
             display: inline-block;
@@ -373,6 +505,14 @@
         }
 
         @media screen and (max-width: 768px) {
+            .navbar ul {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+            }
+
             .hero-image {
                 height: 50vh;
             }
@@ -437,6 +577,49 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <a href="/index.html" class="logo">Ceylon Culinary</a>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a href="/index.html">Home</a></li>
+                    <li>
+                        <a href="#">Recipes ▼</a>
+                        <ul class="dropdown">
+                            <li><a href="/pages/kiribath.html">Kiribath</a></li>
+                            <li><a href="/pages/rice&curry.html">Rice and Curry</a></li>
+                            <li><a href="/pages/hoppers.html">Hoppers</a></li>
+                            <li><a href="/pages/stringhoppers.html">String Hoppers</a></li>
+                            <li><a href="/pages/pittu.html">Pittu</a></li>
+                            <li><a href="/pages/rotti.html">Rotti</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/index.html#about">About</a></li>
+                </ul>
+                <button class="burger" id="burger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" id="close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/kiribath.html">Kiribath</a></li>
+            <li><a href="/pages/rice&curry.html">Rice and Curry</a></li>
+            <li><a href="/pages/hoppers.html">Hoppers</a></li>
+            <li><a href="/pages/stringhoppers.html">String Hoppers</a></li>
+            <li><a href="/pages/pittu.html">Pittu</a></li>
+            <li><a href="/pages/rotti.html">Rotti</a></li>
+            <li><a href="/index.html#about">About</a></li>
+        </ul>
+    </div>
+
     <div class="hero-image">
         <img src="/images/Kiribath-1038x576.jpg" alt="Sri Lankan Milk Rice (Kiribath)">
         <div class="hero-overlay">
@@ -492,6 +675,26 @@
     </div>
 
     <script>
+        // Mobile menu functionality
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-btn');
+
+        burger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
         // Add scroll animation for elements
         document.addEventListener('DOMContentLoaded', function() {
             const animatedElements = document.querySelectorAll('blockquote, article p, h2');
@@ -512,6 +715,18 @@
             
             // Check on scroll
             window.addEventListener('scroll', checkScroll);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
         });
     </script>
 </body>
