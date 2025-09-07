@@ -22,9 +22,8 @@ This project showcases the power of CSS for designing clean and modern layouts w
 
 ## pages
 
-<img width="1920" height="907" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/b913e0d4-b244-4469-8061-09631dd34027" />
 <img width="1920" height="909" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/3062cb75-cdcb-4776-9450-c345521bbbac" />
-<img width="1920" height="907" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/b336eeed-716d-49bd-857b-4100fee7e0fb" />
+<img width="1920" height="907" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/b913e0d4-b244-4469-8061-09631dd34027" />
 <img width="1920" height="906" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/a7b73727-4630-415f-8a11-cb229c98d28c" />
 
 
